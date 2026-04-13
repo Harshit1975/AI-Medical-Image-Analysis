@@ -36,6 +36,50 @@ This platform demonstrates a complete production-ready AI diagnostics pipeline:
 
 ---
 
+---
+
+## 📸 Application Screenshots
+
+### 🏥 Clinical Dashboard Overview
+![Dashboard Overview](screenshots/dashboard_overview.png)
+*Main clinical dashboard showing real-time analytics, patient metrics, and navigation*
+
+### 🔐 Secure Login Interface
+![Login Page](screenshots/login_page.png)
+*Professional authentication system with medical branding*
+
+### 📤 Image Upload & Analysis
+![Upload Interface](screenshots/upload_interface.png)
+*Drag-and-drop X-ray upload with real-time processing indicators*
+
+### 🔍 AI Diagnostic Results
+![Analysis Results](screenshots/analysis_results.png)
+*Detailed diagnostic report with confidence scores and clinical findings*
+
+### 🔥 Explainable AI Heatmap
+![Pneumonia Heatmap](screenshots/pneumonia_heatmap.png)
+*CSS-driven heatmap overlay showing model focus areas for pneumonia detection*
+
+### 🌙 Light/Dark Theme Comparison
+![Theme Toggle](screenshots/theme_comparison.png)
+*Professional theming with glassmorphism effects for different viewing preferences*
+
+### 📊 Interactive Image Viewer
+![Zoom Controls](screenshots/image_viewer.png)
+*Radiologist tools with 0.5x-3x zoom, pan, and inspection capabilities*
+
+### 📄 PDF Report Generation
+![PDF Export](screenshots/pdf_report.png)
+*Client-side PDF generation for HIPAA-compliant clinical record keeping*
+
+### 📈 Analytics Dashboard
+![Patient Analytics](screenshots/analytics_dashboard.png)
+*Real-time metrics, scan history, and cohort diagnostics*
+
+> **📝 Note:** Screenshots are taken from the running application at `http://localhost:5000`. To capture your own screenshots, navigate through the app and use your system's screenshot tool (Win+Shift+S on Windows, Cmd+Shift+4 on Mac).
+
+---
+
 ## 🏥 Industry Context
 
 Modern healthcare requires AI-assisted diagnostics to:
