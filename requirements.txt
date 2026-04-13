@@ -1,0 +1,18 @@
+# Core Data Science & ML
+numpy
+pandas
+opencv-python
+matplotlib
+seaborn
+scikit-learn
+
+# Deep Learning
+tensorflow
+
+# Backend APIs
+Flask
+Werkzeug
+
+# Utilities
+ipykernel
+jupyter

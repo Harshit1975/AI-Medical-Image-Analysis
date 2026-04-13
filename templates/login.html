@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedAI Login - Clinical System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .flash-message {
+            background: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+            padding: 10px;
+            border-radius: var(--radius-sm);
+            text-align: center;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(239, 68, 68, 0.4);
+        }
+        .register-link {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        .register-link a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .register-link a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+    </style>
+</head>
+<body class="login-body">
+    
+    <div class="login-container glass-panel">
+        <div class="login-header">
+            <div class="logo-wrapper">
+                <i class="ph ph-heartbeat logo-icon"></i>
+            </div>
+            <h2>MedAI Authorization</h2>
+            <p>Secure Clinical AI Platform</p>
+        </div>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              <div class="flash-message">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('login') }}" class="login-form">
+            <div class="form-group">
+                <label for="email">Physician Email</label>
+                <div class="input-wrapper">
+                    <i class="ph ph-envelope-simple"></i>
+                    <input type="email" id="email" name="email" placeholder="doctor@hospital.com" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <i class="ph ph-lock-key"></i>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </div>
+            </div>
+
+            <div class="form-options">
+                <label class="remember-me">
+                    <input type="checkbox"> Remember Me
+                </label>
+                <a href="#" class="forgot-link">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-login hover-scale">
+                Secure Login <i class="ph ph-arrow-right"></i>
+            </button>
+        </form>
+
+        <div class="register-link">
+            No active account? <a href="{{ url_for('register') }}">Request Access</a>
+        </div>
+
+        <div class="login-footer">
+            <p><i class="ph ph-shield-check"></i> HIPAA Compliant System v1.0 BETA</p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedAI Registration - Clinical System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .flash-message {
+            background: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+            padding: 10px;
+            border-radius: var(--radius-sm);
+            text-align: center;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(239, 68, 68, 0.4);
+        }
+        .register-link {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+        .register-link a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .register-link a:hover {
+            text-decoration: underline;
+            color: white;
+        }
+    </style>
+</head>
+<body class="login-body">
+    
+    <div class="login-container glass-panel">
+        <div class="login-header">
+            <div class="logo-wrapper">
+                <i class="ph ph-user-plus logo-icon"></i>
+            </div>
+            <h2>Personnel Registration</h2>
+            <p>Request MedAI Ecosystem Access</p>
+        </div>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              <div class="flash-message">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('register') }}" class="login-form">
+            <div class="form-group">
+                <label for="name">Full Name with Title</label>
+                <div class="input-wrapper">
+                    <i class="ph ph-identification-card"></i>
+                    <input type="text" id="name" name="name" placeholder="Dr. Jane Doe" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Institutional Email</label>
+                <div class="input-wrapper">
+                    <i class="ph ph-envelope-simple"></i>
+                    <input type="email" id="email" name="email" placeholder="jane.doe@hospital.edu" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Create Security Key</label>
+                <div class="input-wrapper">
+                    <i class="ph ph-shield-check"></i>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-login hover-scale" style="margin-top: 1rem;">
+                Authorize Credentials <i class="ph ph-check-circle"></i>
+            </button>
+        </form>
+
+        <div class="register-link">
+            Already authorized? <a href="{{ url_for('login') }}">Access Portal</a>
+        </div>
+
+        <div class="login-footer">
+            <p><i class="ph ph-lock-key"></i> AES-256 Encrypted Ledger System</p>
+        </div>
+    </div>
+
+</body>
+</html>
