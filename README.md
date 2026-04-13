@@ -56,18 +56,6 @@ This platform demonstrates a complete production-ready AI diagnostics pipeline:
 ![Analysis Results](screenshots/analysis_results.png)
 *Detailed diagnostic report with confidence scores and clinical findings*
 
-### 🔥 Explainable AI Heatmap
-![Pneumonia Heatmap](screenshots/pneumonia_heatmap.png)
-*CSS-driven heatmap overlay showing model focus areas for pneumonia detection*
-
-### 🌙 Light/Dark Theme Comparison
-![Theme Toggle](screenshots/theme_comparison.png)
-*Professional theming with glassmorphism effects for different viewing preferences*
-
-### 📊 Interactive Image Viewer
-![Zoom Controls](screenshots/image_viewer.png)
-*Radiologist tools with 0.5x-3x zoom, pan, and inspection capabilities*
-
 ### 📄 PDF Report Generation
 ![PDF Export](screenshots/pdf_report.png)
 *Client-side PDF generation for HIPAA-compliant clinical record keeping*
